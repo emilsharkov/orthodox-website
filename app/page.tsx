@@ -1,65 +1,79 @@
-import Image from "next/image";
+import About from "@/components/About";
+import Bulletin from "@/components/Bulletin";
+import Calendar from "@/components/Calendar";
+import Contact from "@/components/Contact";
+import Countdown from "@/components/Countdown";
+import Events from "@/components/Events";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Map from "@/components/Map";
+import Navbar from "@/components/Navbar";
+import Quote from "@/components/Quote";
+import Video from "@/components/Video";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="flex flex-col justify-start items-center w-screen h-screen bg-white">
+      <iframe
+        data-testid="embed-iframe"
+        style={{ borderRadius: "12px" }}
+        src="https://open.spotify.com/embed/playlist/1Tpgc0HYDIgoWfzwyOpw2B?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6707.856908615561!2d-117.20486548719292!3d32.7941562735466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0023e51701c9%3A0xfc2fedb5fac801fd!2sSt.%20George%20Serbian%20Orthodox%20Church!5e0!3m2!1sen!2sus!4v1765933047838!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <nav id="navbar" className="">
+        <Navbar />
+      </nav>
+      <div className="flex flex-col gap-5">
+        <section id="hero" className="hero-section">
+          <Hero />
+        </section>
+        <section id="about" className="about-section">
+          <About />
+        </section>
+        <section id="video" className="video-section">
+          <Video />
+        </section>
+        <section id="map" className="map-section">
+          <Map />
+        </section>
+        <section id="calendar" className="calendar-section">
+          <Calendar />
+        </section>
+        <section id="quote" className="quote-section">
+          <Quote />
+        </section>
+        <section id="events" className="events-section">
+          <Events />
+        </section>
+        <section id="countdown" className="countdown-section">
+          <Countdown />
+        </section>
+        <section id="bulletin" className="bulletin-section">
+          <Bulletin />
+        </section>
+        <section id="contact" className="contact-section">
+          <Contact />
+        </section>
+        <section id="footer" className="footer-section">
+          <Footer />
+        </section>
+      </div>
+    </main>
   );
-}
+};
+
+export default Home;
