@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { El_Messiri } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const elMessiri = El_Messiri({
   subsets: ["latin"],
   display: "swap",
 });
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className} antialiased`}>
+    <html lang="en" className={`${elMessiri.className} antialiased`}>
       <body>{children}</body>
     </html>
   );
