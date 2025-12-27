@@ -1,0 +1,32 @@
+// Time conversion constants
+const MILLISECONDS_PER_SECOND = 1000;
+const SECONDS_PER_MINUTE = 60;
+const MINUTES_PER_HOUR = 60;
+const HOURS_PER_DAY = 24;
+
+// Sunday service time constants
+const SUNDAY_SERVICE_HOUR = 10;
+const SUNDAY_SERVICE_MINUTE = 0;
+const SUNDAY_SERVICE_SECOND = 0;
+const SUNDAY_SERVICE_MILLISECOND = 0;
+
+// Week calculation constants
+const DAYS_IN_WEEK = 7;
+
+// Formatting constants
+const PADDING_LENGTH = 2;
+const PADDING_CHAR = "0";
+
+export {
+  MILLISECONDS_PER_SECOND,
+  SECONDS_PER_MINUTE,
+  MINUTES_PER_HOUR,
+  HOURS_PER_DAY,
+  SUNDAY_SERVICE_HOUR,
+  SUNDAY_SERVICE_MINUTE,
+  SUNDAY_SERVICE_SECOND,
+  SUNDAY_SERVICE_MILLISECOND,
+  DAYS_IN_WEEK,
+  PADDING_LENGTH,
+  PADDING_CHAR,
+};

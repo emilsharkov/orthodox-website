@@ -9,38 +9,46 @@ import Hero from "@/components/Hero";
 import Map from "@/components/Map";
 import Navbar from "@/components/Navbar";
 import Quote from "@/components/Quote";
+import ScrollBackground from "@/components/ScrollBackground";
 import Video from "@/components/Video";
+import template from "@/lib/template";
 
 const Home = () => {
+  const { navbar, hero, video, map, calendar, quote, footer } = template;
+
   return (
     <main className="flex flex-col justify-start items-center w-screen h-screen bg-white">
-      <div className="flex flex-col gap-5 w-full">
-        <section id="hero" className="hero">
+      <div className="flex flex-col gap-5  w-full mx-auto">
+        <section id="hero" className="min-h-[90vh]">
           <nav id="navbar" className="absolute w-full flex justify-center z-20">
-            <Navbar />
+            <Navbar {...navbar} />
           </nav>
-          <Hero />
+          <Hero {...hero} />
         </section>
         <section id="about" className="about">
           <About />
         </section>
         <section id="video" className="video">
-          <Video url="https://www.youtube.com/embed/6b5i16j6P3o?si=zYSpauVcVzaO0Paj" />
+          <Video {...video} />
         </section>
         <section id="map" className="map">
-          <Map url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6707.856908615561!2d-117.20486548719292!3d32.7941562735466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0023e51701c9%3A0xfc2fedb5fac801fd!2sSt.%20George%20Serbian%20Orthodox%20Church!5e0!3m2!1sen!2sus!4v1765933047838!5m2!1sen!2sus" />
+          <Map {...map} />
         </section>
         <section id="calendar" className="calendar">
-          <Calendar url="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" />
+          <Calendar {...calendar} />
         </section>
-        <section id="quote" className="quote">
-          <Quote />
+        <section id="quote" className="min-h-[90vh]">
+          <ScrollBackground img={quote.img}>
+            <Quote {...quote} />
+          </ScrollBackground>
         </section>
         <section id="events" className="events">
           <Events />
         </section>
-        <section id="countdown" className="countdown">
-          <Countdown />
+        <section id="countdown" className="min-h-[90vh]">
+          <ScrollBackground img="/apostles.jpg">
+            <Countdown />
+          </ScrollBackground>
         </section>
         <section id="bulletin" className="bulletin">
           <Bulletin />
@@ -50,7 +58,7 @@ const Home = () => {
         </section>
       </div>
       <footer id="footer" className="w-full flex justify-center">
-        <Footer />
+        <Footer {...footer} />
       </footer>
     </main>
   );

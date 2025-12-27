@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { El_Messiri } from "next/font/google";
+import { Bitter } from "next/font/google";
 import "./globals.css";
 
-const elMessiri = El_Messiri({
+const bitter = Bitter({
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Orthodox Website",
-  description: "Sample website for Orthodox Church",
+  title: "St. George Serbian Orthodox Church",
+  description: "St. George Serbian Orthodox Church",
+  icons: {
+    icon: "/serbian-cross.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${elMessiri.className} antialiased`}>
+    <html lang="en" className={`${bitter.className} antialiased`}>
       <body>{children}</body>
     </html>
   );
