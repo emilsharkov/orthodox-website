@@ -1,5 +1,4 @@
 import Link from "next/link";
-import NavLink from "./NavLink";
 
 export interface NavbarProps {
   img: string;
@@ -22,7 +21,9 @@ const Navbar = (props: NavbarProps) => {
       </Link>
       <ul className="w-full flex flex-row justify-end items-center gap-1 p-2 text-white text-md text-shadow-2xl font-bold">
         {links.map((link) => (
-          <NavLink key={link.href} href={link.href} name={link.name} />
+          <li key={link.href} className="p-2 px-2 rounded-sm cursor-pointer">
+            <Link href={link.href}>{link.name}</Link>
+          </li>
         ))}
       </ul>
     </div>

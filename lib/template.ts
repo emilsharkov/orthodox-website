@@ -1,4 +1,5 @@
 import { CalendarProps } from "@/components/Calendar";
+import { FeatureSectionProps } from "@/components/FeatureSection";
 import { FooterProps } from "@/components/Footer";
 import { HeroProps } from "@/components/Hero";
 import { MapProps } from "@/components/Map";
@@ -13,6 +14,7 @@ interface TemplateProps {
   map: MapProps;
   calendar: CalendarProps;
   quote: QuoteProps;
+  featureSection: FeatureSectionProps;
   footer: FooterProps;
 }
 
@@ -29,7 +31,8 @@ const template: TemplateProps = {
   hero: {
     img: "/parish.jpg",
     icon: "/serbian-cross.png",
-    title: "St. George Serbian Orthodox Church",
+    patronSaint: "St. George",
+    nationality: "Serbian",
   },
   video: {
     url: "https://www.youtube.com/embed/6b5i16j6P3o?si=zYSpauVcVzaO0Paj",
@@ -45,6 +48,12 @@ const template: TemplateProps = {
       "The person advancing in the spiritual life studies three things: the commandments, doctrine, and faith in the Holy Trinity.",
     author: "St. Thalassios the Libyan",
     img: "/christ-pantocrator.jpg",
+  },
+  featureSection: {
+    title: "Who is St. George the Great Martyr?",
+    description:
+      "Saint George was a Roman soldier and Christian martyr revered for his unwavering faith and courage, symbolized by the legend of his victory over the dragon.",
+    image: "/stgeorge-trophy.webp",
   },
   footer: {
     parishName: "St. George Serbian Orthodox Church",

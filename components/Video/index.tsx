@@ -6,7 +6,7 @@ const Video = (props: VideoProps) => {
   const { url } = props;
   return (
     <iframe
-      className="w-full h-[315px] border-0"
+      className="aspect-5/3! max-h-[60vh] border-0"
       src={url}
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
