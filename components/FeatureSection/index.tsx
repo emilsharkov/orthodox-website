@@ -9,8 +9,8 @@ export interface FeatureSectionProps {
 const FeatureSection = (props: FeatureSectionProps) => {
   const { title, description, image } = props;
   return (
-    <div className="w-full h-full flex flex-row max-lg:flex-col items-center justify-center gap-8">
-      <div className="w-full max-w-[500px] flex flex-col gap-8 items-start justify-center rounded-lg text-black">
+    <div className="w-full h-full flex flex-row max-lg:flex-col items-center justify-center gap-12">
+      <div className="w-full max-w-1/2 flex flex-col gap-8 items-start justify-center rounded-lg text-black">
         <div className="text-base font-bold uppercase text-sky-700">
           Our Patron
         </div>

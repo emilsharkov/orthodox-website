@@ -14,17 +14,8 @@ import Video from "@/components/Video";
 import template from "@/lib/template";
 
 const Home = () => {
-  const {
-    navbar,
-    hero,
-    video,
-    map,
-    calendar,
-    quote,
-    footer,
-    featureSection,
-    countdown,
-  } = template;
+  const { navbar, hero, video, map, calendar, quote, footer, featureSection } =
+    template;
 
   return (
     <main className="flex flex-col justify-start items-center w-screen h-screen bg-stone-100">
@@ -33,7 +24,7 @@ const Home = () => {
           <Navbar {...navbar} />
         </TintedBackground>
       </nav>
-      <div className="flex flex-col w-full mx-auto">
+      <div className="flex flex-col w-full">
         {/* Hero — visual impact */}
         <section id="hero" className="min-h-[90vh]">
           <Hero {...hero} />
@@ -41,12 +32,15 @@ const Home = () => {
 
         <TintedBackground className="bg-stone-100/50 flex-col" img="paper.jpg">
           {/* About — reading */}
-          <section id="about">
+          <section className="max-w-[1080px] w-full flex justify-center items-center">
             <About />
           </section>
 
           {/* Features — structure */}
-          <section id="feature-section" className="text-white min-h-[90vh]">
+          <section
+            id="feature-section"
+            className="text-white max-w-[1080px] w-full py-12"
+          >
             <FeatureSection {...featureSection} />
           </section>
         </TintedBackground>
@@ -58,21 +52,27 @@ const Home = () => {
           </ScrollBackground>
         </section>
 
+        <TintedBackground className="bg-stone-100/50" img="paper.jpg">
+          {/* Calendar — informational */}
+          <section
+            id="calendar"
+            className="max-w-[900px] flex flex-col items-center justify-center w-full py-12 gap-8"
+          >
+            <div className="text-base font-bold uppercase text-sky-700">
+              Our Service Schedule
+            </div>
+            <div className="text-5xl font-medium">
+              Come and Experience Orthodoxy!
+            </div>
+            <Calendar {...calendar} />
+          </section>
+        </TintedBackground>
+
         {/* Countdown — urgency */}
         <section id="countdown" className="min-h-[90vh]">
           <ScrollBackground img="apostles.jpg">
             <Countdown />
           </ScrollBackground>
-        </section>
-
-        {/* Calendar — informational */}
-        <section id="calendar" className="min-h-[90vh]">
-          <TintedBackground
-            className="bg-stone-100/50 flex flex-col h-full w-full"
-            img="paper.jpg"
-          >
-            <Calendar {...calendar} />
-          </TintedBackground>
         </section>
 
         {/* Map — utility (last content section) */}

@@ -13,6 +13,12 @@ export interface CountdownProps {
 
 const Countdown = () => {
   const { days, hours, minutes, seconds } = useCountdown();
+  const items = [
+    { value: days, label: "Days" },
+    { value: hours, label: "Hours" },
+    { value: minutes, label: "Minutes" },
+    { value: seconds, label: "Seconds" },
+  ];
 
   return (
     <div className="w-full h-full flex justify-center items-center">
@@ -23,30 +29,23 @@ const Countdown = () => {
             src="/serbian-cross.png"
             alt="Serbian Cross"
           />
-          <div className="text-3xl font-bold">
+          <div className="text-3xl font-medium">
             Countdown to Sunday's Service
           </div>
-          <div className="text-lg font-semibold">
+          <div className="text-lg font-normal">
             Our Sunday Divine Liturgy is at 10:00 AM. Everyone is welcome! Come
             and worship with us!
           </div>
           <div className="flex flex-row gap-4">
-            <div className="flex flex-col items-center">
-              <div className="text-6xl font-bold">{days}</div>
-              <div className="text-lg font-semibold">Days</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-6xl font-bold">{hours}</div>
-              <div className="text-lg font-semibold">Hours</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-6xl font-bold">{minutes}</div>
-              <div className="text-lg font-semibold">Minutes</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-6xl font-bold">{seconds}</div>
-              <div className="text-lg font-semibold">Seconds</div>
-            </div>
+            {items.map((item) => {
+              const { value, label } = item;
+              return (
+                <div key={item.label} className="flex flex-col items-center">
+                  <div className="text-6xl font-medium">{value}</div>
+                  <div className="text-lg font-normal">{label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </BlurBackground>

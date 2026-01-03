@@ -12,8 +12,8 @@ const Quote = (props: QuoteProps) => {
     <div className="w-full h-full flex justify-center items-center">
       <BlurBackground>
         <div className="max-w-[700px] text-white text-center flex flex-col gap-4 justify-center items-center bg-black/60 px-8 py-16 rounded-lg">
-          <div className="text-2xl font-medium">"{quote}"</div>
-          <div className="text-xl font-medium self-end">{author}</div>
+          <div className="text-2xl font-normal">"{quote}"</div>
+          <div className="text-xl font-normal self-end">{author}</div>
         </div>
       </BlurBackground>
     </div>
