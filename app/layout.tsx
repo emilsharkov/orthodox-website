@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Bitter } from "next/font/google";
+import { Vollkorn } from "next/font/google";
 import "./globals.css";
 
-const bitter = Bitter({
+const vollkorn = Vollkorn({
   subsets: ["latin"],
   display: "swap",
 });
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bitter.className} antialiased`}>
+    <html lang="en" className={`${vollkorn.className} antialiased`}>
       <body>{children}</body>
     </html>
   );

@@ -1,19 +1,16 @@
+import { cn } from "@/lib/utils";
+
 export interface BlurBackgroundProps {
-  img: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 const BlurBackground = (props: BlurBackgroundProps) => {
-  const { img, children } = props;
+  const { children, className } = props;
   return (
-    <div className="relative h-full w-full">
-      <img
-        src={img}
-        className="cursor-none absolute inset-0 h-full w-full object-cover blur-2xl"
-      />
-      <div className="relative z-10 text-white w-full h-full flex justify-center items-center">
-        {children}
-      </div>
+    <div className="relative inline-block">
+      <div className="absolute inset-0 backdrop-blur-xs" />
+      <div className={cn(className, "relative")}>{children}</div>
     </div>
   );
 };

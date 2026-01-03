@@ -14,12 +14,12 @@ const Navbar = (props: NavbarProps) => {
     <div className="w-full flex flex-row justify-between items-center p-2">
       <Link href="/" className="shrink-0">
         <img
-          className="h-30 w-auto object-contain"
+          className="h-18 w-auto object-contain grayscale-0"
           src={img}
           alt="St. George Serbian Orthodox Church"
         />
       </Link>
-      <ul className="w-full flex flex-row justify-end items-center gap-1 p-2 text-white text-md text-shadow-2xl font-bold">
+      <ul className="w-full flex flex-row justify-end items-center gap-1 p-2 text-white text-shadow-2xl font- text-lg">
         {links.map((link) => (
           <li key={link.href} className="p-2 px-2 rounded-sm cursor-pointer">
             <Link href={link.href}>{link.name}</Link>

@@ -15,7 +15,7 @@ const Footer = (props: FooterProps) => {
   return (
     <div
       className={cn(
-        "w-full flex py-4",
+        "w-full flex py-4 text-white",
         hasMediaLinks ? "justify-between" : "justify-center",
       )}
     >

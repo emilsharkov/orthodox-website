@@ -11,7 +11,7 @@ const ScrollBackground = (props: ScrollBackgroundProps) => {
         className="absolute inset-0 bg-fixed bg-center bg-cover"
         style={{ backgroundImage: `url(${img})` }}
       />
-      {/* <div className={`absolute inset-0 z-1 bg-amber-50 0/20`} /> */}
+      {/* <div className={`absolute inset-0 z-1 bg-blue-700/40`} /> */}
       <div className="relative z-10 w-full h-full">{children}</div>
     </div>
   );
