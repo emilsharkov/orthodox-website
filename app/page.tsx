@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <main className="flex flex-col justify-start items-center w-screen h-screen bg-stone-100">
-      <nav id="navbar" className="w-full">
+      <nav id="navbar" className="w-full sticky top-0 z-50">
         <TintedBackground className="bg-sky-900/80" img="/parchment.jpg">
           <Navbar {...navbar} />
         </TintedBackground>

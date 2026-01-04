@@ -1,5 +1,6 @@
 import ScrollBackground from "../ScrollBackground";
 import BlurBackground from "@/components/BlurBackground";
+import { Button } from "../ui/button";
 
 export interface HeroProps {
   img: string;
@@ -12,16 +13,29 @@ const Hero = (props: HeroProps) => {
   const { img, icon, patronSaint, nationality } = props;
   return (
     <ScrollBackground img={img}>
-      <div className="flex w-full h-full justify-center items-center z-0">
-        <BlurBackground>
-          <div className="bg-black/60 text-white px-6 py-12 text-center w-[700px] flex flex-col items-center gap-4 rounded-lg">
-            <img className="w-20 h-20" src={icon} />
-            <div className="text-5xl font-medium leading-16 text-shadow-2xl">
-              <div>Welcome to {patronSaint}</div>
-              <div>{nationality} Orthodox Church</div>
+      <div className="flex w-full h-full justify-start items-start">
+        <div className="bg-black/60 w-full h-full text-white flex flex-col justify-end pb-16 pl-12 gap-4">
+          <div className="text-shadow-2xl">
+            <div className="text-6xl font-medium leading-16">
+              Welcome to {patronSaint}
+            </div>
+            <div className="text-6xl font-medium leading-16">
+              {nationality} Orthodox Church
+            </div>
+            <p className="text-lg font-light leading-8 w-[500px]">
+              Discover the beauty of Orthodox Christianity and experience the
+              joy of worshiping God in the heart of your community.
+            </p>
+            <div className="flex flex-row gap-4 pt-4">
+              <Button className="text-base px-6 py-6 bg-sky-800">
+                Learn More
+              </Button>
+              <Button className="text-base px-6 py-6 bg-sky-800">
+                Contact Us
+              </Button>
             </div>
           </div>
-        </BlurBackground>
+        </div>
       </div>
     </ScrollBackground>
   );
