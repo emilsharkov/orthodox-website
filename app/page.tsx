@@ -68,7 +68,7 @@ const Home = () => {
             <div className="text-base font-bold uppercase text-sky-700">
               Our Service Schedule
             </div>
-            <div className="text-5xl font-medium">
+            <div className="text-center text-5xl font-medium">
               Come and Experience Orthodoxy!
             </div>
             <Calendar {...calendar} />

@@ -12,10 +12,10 @@ export interface HeroProps {
 const Hero = (props: HeroProps) => {
   const { img, icon, patronSaint, nationality } = props;
   return (
-    <ScrollBackground img={img}>
+    <ScrollBackground img={img} position="top">
       <div className="flex w-full h-full justify-start items-start">
-        <div className="bg-black/60 w-full h-full text-white flex flex-col justify-end pb-16 pl-12 gap-4">
-          <div className="text-shadow-2xl">
+        <div className="bg-linear-to-b from-black/20 via-black/60 to-black/80 w-full h-full text-white flex items-end justify-center pb-24 pl-12 gap-4">
+          <div className="text-shadow-2xl flex flex-col justify-end w-full max-w-[1080px]">
             <div className="text-6xl font-medium leading-16">
               Welcome to {patronSaint}
             </div>
