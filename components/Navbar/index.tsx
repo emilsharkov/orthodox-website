@@ -19,7 +19,7 @@ const Navbar = (props: NavbarProps) => {
           alt="St. George Serbian Orthodox Church"
         />
       </Link>
-      <ul className="w-full flex flex-row justify-end items-center gap-1 p-2 text-white text-shadow-2xl font- text-lg">
+      <ul className="w-full flex flex-row justify-end items-center gap-1 p-2 text-white text-shadow-2xl font-medium text-lg">
         {links.map((link) => (
           <li key={link.href} className="p-2 px-2 rounded-sm cursor-pointer">
             <Link href={link.href}>{link.name}</Link>

@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Calendar from "@/components/Calendar";
-import Contact from "@/components/Contact";
 import Countdown from "@/components/Countdown";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/components/Footer";
@@ -10,17 +9,25 @@ import Navbar from "@/components/Navbar";
 import Quote from "@/components/Quote";
 import ScrollBackground from "@/components/ScrollBackground";
 import TintedBackground from "@/components/TintedBackground";
-import Video from "@/components/Video";
 import template from "@/lib/template";
 
 const Home = () => {
-  const { navbar, hero, video, map, calendar, quote, footer, featureSection } =
-    template;
+  const {
+    navbar,
+    hero,
+    about,
+    video,
+    map,
+    calendar,
+    quote,
+    footer,
+    featureSection,
+  } = template;
 
   return (
     <main className="flex flex-col justify-start items-center w-screen h-screen bg-stone-100">
       <nav id="navbar" className="w-full">
-        <TintedBackground className="bg-sky-700/80" img="/parchment.jpg">
+        <TintedBackground className="bg-sky-900/80" img="/parchment.jpg">
           <Navbar {...navbar} />
         </TintedBackground>
       </nav>
@@ -33,7 +40,7 @@ const Home = () => {
         <TintedBackground className="bg-stone-100/50 flex-col" img="paper.jpg">
           {/* About — reading */}
           <section className="max-w-[1080px] w-full flex justify-center items-center">
-            <About />
+            <About {...about} />
           </section>
 
           {/* Features — structure */}

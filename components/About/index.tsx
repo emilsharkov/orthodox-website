@@ -1,10 +1,27 @@
-const About = () => {
+import TextBlock, { TextBlockProps } from "../TextBlock";
+
+export interface AboutProps extends TextBlockProps {
+  // img: string;
+}
+
+const About = (props: AboutProps) => {
+  const { subtitle, title, description } = props;
   return (
-    <div className="w-full flex flex-col gap-6 py-12 px-12">
-      <div className="flex flex-col gap-4">
-        <div className="text-2xl font-semibold text-gray-900">
-          What is Orthodoxy?
+    <div className="w-full flex flex-col gap-12 py-16 px-12">
+      {/* Welcome Section */}
+      <TextBlock subtitle={subtitle} title={title} description={description} />
+
+      {/* What is Orthodoxy Section */}
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
+            Understanding Our Faith
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+            What is Orthodoxy?
+          </h2>
         </div>
+        <div className="w-16 h-1 bg-sky-700/30"></div>
         <p className="text-lg text-gray-700 leading-relaxed">
           Orthodoxy, meaning "right belief" or "right worship," is the ancient
           Christian faith that traces its origins directly to the Apostles and
@@ -19,18 +36,6 @@ const About = () => {
           through participation in the divine life, emphasizing both personal
           spiritual growth and the communal experience of worship within the
           Body of Christ.
-        </p>
-      </div>
-      <div className="flex flex-col gap-4">
-        <div className="text-2xl font-semibold text-gray-900">Who are we?</div>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Welcome to St. George Serbian Orthodox Church, a vibrant community
-          dedicated to preserving Orthodox Christian faith, Serbian heritage,
-          and serving our members with love and devotion. We are committed to
-          nurturing the spiritual growth of our community through divine
-          worship, education, and fellowship. Our parish family welcomes all who
-          seek to deepen their faith and connect with others on the same
-          spiritual journey.
         </p>
       </div>
     </div>

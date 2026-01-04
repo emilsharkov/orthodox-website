@@ -7,10 +7,12 @@ import { MapProps } from "@/components/Map";
 import { NavbarProps } from "@/components/Navbar";
 import { QuoteProps } from "@/components/Quote";
 import { VideoProps } from "@/components/Video";
+import { AboutProps } from "@/components/About";
 
 interface TemplateProps {
   navbar: NavbarProps;
   hero: HeroProps;
+  about: AboutProps;
   video: VideoProps;
   map: MapProps;
   calendar: CalendarProps;
@@ -31,10 +33,16 @@ const template: TemplateProps = {
     ],
   },
   hero: {
-    img: "parish.jpg",
+    img: "st-george-ocean.jpg",
     icon: "/serbian-cross.png",
     patronSaint: "St. George",
     nationality: "Serbian",
+  },
+  about: {
+    subtitle: "Our Community",
+    title: "The Lord's Blessings!",
+    description:
+      "We are St. George Serbian Orthodox Church, a vibrant community dedicated to preserving Orthodox Christian faith, Serbian heritage, and serving our members with love and devotion. We are committed to nurturing the spiritual growth of our community through divine worship, education, and fellowship. Our parish family welcomes all who seek to deepen their faith and connect with others on the same spiritual journey.",
   },
   video: {
     url: "https://www.youtube.com/embed/6b5i16j6P3o?si=zYSpauVcVzaO0Paj",
@@ -52,6 +60,7 @@ const template: TemplateProps = {
     img: "christ-pantocrator.jpg",
   },
   featureSection: {
+    subtitle: "Our Patron",
     title: "Who is St. George the Great Martyr?",
     description:
       "Saint George is a Christian martyr revered for his unwavering faith in God and courage in the face of death. He continues to strengthen the Orthodox Church through his intercessions and miracles.",
